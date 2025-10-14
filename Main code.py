@@ -1,5 +1,5 @@
 import streamlit as st
-import matplotlib.pyplot -m as plt
+import matplotlib.pyplot as plt
 
 # ---- Page Config ----
 st.set_page_config(
@@ -11,7 +11,7 @@ st.set_page_config(
 # ---- Title & Description ----
 st.title("🌞 Solar Energy Simulator")
 st.markdown("""
-This interactive simulator lets you **estimate daily solar energy output** and **optimize your solar panel setup**.  
+This interactive simulator lets you estimate daily solar energy output** and optimize your solar panel setup.  
 Use the sliders to adjust the number of panels, sunlight hours, panel efficiency, and tilt angle.  
 Graphs and tips update dynamically to help you understand your results.
 """)
