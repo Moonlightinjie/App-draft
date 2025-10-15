@@ -7,7 +7,7 @@ tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & F
 
 
 with tab1:
-    st. title ("Solar Power Calculator")
+    st. title ("The Simpler Solar Power Calculator")
     st. write ("Enter the information you know and allow the system to calculate for you")
 
 Wattage = st.number_input ("Panel Wattage (W)", value = 400)
@@ -16,5 +16,10 @@ Season = st.selectbox ("What times are you trying to get maximum sunlight absorp
 if Season == "The whole year":
     tilt = Latitude 
     st. write ("Tilt is simply equal to your latitude")
-
+elif Season == "Summer":
+    tilt = Latitude - 15
+    st. write ("Tilt is equal to your latitude - 15 degrees")
+else:
+    tilt = Latitude + 15
+    st. write ("Tilt is equal to your latitude - 15 degrees")
     
