@@ -22,4 +22,5 @@ elif Season == "Summer":
 else:
     tilt = Latitude + 15
     st. write ("Tilt is equal to your latitude - 15 degrees")
+st.success(f"Recommended tilt angle: {tilt:.1f}°")
     
