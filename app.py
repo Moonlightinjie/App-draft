@@ -14,7 +14,7 @@ Wattage = st.number_input ("Panel Wattage (W)", value = 400)
 Latitude = st.number_input ("Input the latitude of your geographical area (google it and then enter it)", value = 90)
 Season = st.selectbox ("What times are you trying to get maximum sunlight absorption for?", ["The whole year", "Summer", "Winter"])
 if Season == "The whole year":
-    tilt = latitude 
+    tilt = Latitude 
     st. write ("Tilt is simply equal to your latitude")
 
     
