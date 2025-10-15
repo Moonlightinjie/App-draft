@@ -2,7 +2,7 @@ import streamlit as st
 import matplotlib.pyplot as plt
 st.set_page_config(page_title=" The Simpler Solar Calculator", layout="centered")
 
-tab1, tab2, tab3 = st.tabs 
+tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
 
 
 
