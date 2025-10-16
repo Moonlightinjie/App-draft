@@ -5,8 +5,6 @@ st.set_page_config(page_title=" The Simpler Solar Calculator", layout="centered"
 
 tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
 
-
-
 with tab1:
     st. title ("The Simpler Solar Power Calculator")
     st. write ("Enter the information you know and allow the system to calculate for you")
@@ -15,7 +13,7 @@ st. header ("Estimated Output")
 
 Wattage = st.number_input ("Panel Wattage (the maximum power the panel can generate, think about what you're using the panel for to estimate this)", value = 400)
 
-sun_hours = st. number_input ("How many sunlight hours are there in your area?", value = 10)
+sun_hours = st. number_input ("How many sunlight hours do you expect (Base this on your area, month etc.)?", value = 10)
 Efficiency = st. slider ("Choose system efficiency you want in your panels) (%)", 50, 100, 80) 
 st. write ("Lower values mean your panels will be cheaper but less efficient")
 
@@ -27,11 +25,11 @@ st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
 
 st. header ("Number of panels needed")
 
-daily_need = st. number_input ("Enter your daily household energy usage (kWh)")
+daily_need = st. number_input ("Enter your daily household energy usage (kWh) you can use the figure calculated above")
 number_panels = math.ceil (daily_need / daily_energy)
 st. metric ("Estimated number of panels needed", number_panels)
 
-st. header ("Angle tilt)
+st. header ("Angle tilt")
 
 Latitude = st.number_input ("Input the latitude of your geographical area (google it and then enter it if needed)", value = 90)
 Season = st.selectbox ("What times are you trying to get maximum sunlight absorption for?", ["The whole year", "Summer", "Winter"])
@@ -45,4 +43,6 @@ else:
     tilt = Latitude + 15
     st. write ("Tilt is equal to your latitude - 15 degrees")
 st.success(f"Recommended tilt angle: {tilt:.1f}°")
-    
+
+st. header ("Panel degradation") 
+
