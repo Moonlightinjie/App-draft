@@ -46,7 +46,6 @@ st.success(f"Recommended tilt angle: {tilt:.1f}°")
 
 st. header ("Panel degradation") 
 Degradation = st. number_input ("Enter a specific year to figure out the efficiency of your panel after this period.")
-Degradation_calculation = (.)
 st. metric = ("Estimated panel efficiency", Degradation_calculation)
 
 st. header ("Estimated number of panels that can fit")
