@@ -20,8 +20,6 @@ st. write ("Lower values mean your panels will be cheaper but less efficient")
 daily_energy = (Wattage * (Efficiency / 100)) * sun_hours / 1000
 monthly_energy = (daily_energy * 30)
 
-st.metric("Estimated Daily Energy Output", f"{daily_energy:.2f} kWh/day")
-st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
 
 st. header ("Number of panels needed")
 
