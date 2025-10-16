@@ -20,7 +20,7 @@ st. write ("Lower values mean your panels will be cheaper but less efficient")
 daily_energy = (Wattage * (Efficiency / 100)) * sun_hours / 1000
 monthly_energy = (daily_energy * 30)
 
-st.metric("Estimated Daily Energy Output", f"{daily_energy:.2f} kWh/day")
+st.metric("Estimated Daily Energy Output", f"[daily_energy:.2f] kWh/day")
 st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
 
 st. header ("Number of panels needed")
@@ -46,7 +46,7 @@ st.success(f"Recommended tilt angle: {tilt:.1f}°")
 
 st. header ("Panel degradation") 
 Degradation = st. number_input ("Enter a specific year to figure out the efficiency of your panel after this period.")
-Degradation_calculation = (Degradation - 0.5)
+Degradation_calculation = (.)
 st. metric = ("Estimated panel efficiency", Degradation_calculation)
 
 st. header ("Estimated number of panels that can fit")
@@ -56,5 +56,7 @@ Panel_size = st. number_input ("Enter approximate panel sixe")
 Roof_size = st.number_input ("If you have an estimate of your roof size enter it")
 Panel_num = (Roof_size / Panel_size)
 Estimated_numberpanels = ("The number of panels that can fit:", Panel_num)
-                        
+
+st. header ("Battery size")
+
 
