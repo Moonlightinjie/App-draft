@@ -20,6 +20,8 @@ st. write ("Lower values mean your panels will be cheaper but less efficient")
 daily_energy = (Wattage * (Efficiency / 100)) * sun_hours / 1000
 monthly_energy = (daily_energy * 30)
 
+st.metric("Estimated Daily Energy Output", f"{daily_energy:.2f} kWh/day")
+st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
 
 st. header ("Number of panels needed")
 
@@ -42,18 +44,25 @@ else:
     st. write ("Tilt is equal to your latitude - 15 degrees")
 st.success(f"Recommended tilt angle: {tilt:.1f}°")
 
-st. header ("Panel degradation") 
-Degradation = st. number_input ("Enter a specific year to figure out the efficiency of your panel after this period.")
-st. metric = ("Estimated panel efficiency", Degradation_calculation)
+st.header("Panel degradation")
 
-st. header ("Estimated number of panels that can fit")
+years = st.number_input("Enter a specific year to figure out the efficiency of your panel after this period.", min_value=0, step=1)
+degradation_rate = 0.005  # 0.5% per year
+efficiency = 100 * (1 - degradation_rate * years)
 
-st. write ("The average size of a solar panel is 65 inches long by 39 inches wide, but this varies, if you have an idea of the panel size you will be using, enter it.")
-Panel_size = st. number_input ("Enter approximate panel sixe")
-Roof_size = st.number_input ("If you have an estimate of your roof size enter it")
-Panel_num = (Roof_size / Panel_size)
-Estimated_numberpanels = ("The number of panels that can fit:", Panel_num)
+st.metric("Estimated panel efficiency (%)", f"{efficiency:.2f}")
 
+st.header("Estimated number of panels that can fit")
+
+st.write("The average size of a solar panel is 65 inches long by 39 inches wide, but this varies. If you have an idea of the panel size you will be using, enter it below.")
+
+panel_size = st.number_input("Enter approximate panel size (sq ft)", min_value=1.0)
+roof_size = st.number_input("If you have an estimate of your roof size, enter it (sq ft)", min_value=1.0)
+
+if panel_size > 0:
+    panel_num = roof_size / panel_size
+    st.write("Estimated number of panels that can fit:", int(panel_num))
+    
 st. header ("Battery size")
 
 
