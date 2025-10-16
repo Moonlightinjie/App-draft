@@ -25,7 +25,7 @@ st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
 
 daily_need = st. number_input ("Enter your daily household energy usage (kWh)")
 number_panels = math.ceil (daily_need / daily_energy)
-st. metric ("Estimated number of panels needed" number_panels)
+st. metric ("Estimated number of panels needed", number_panels)
 
 Latitude = st.number_input ("Input the latitude of your geographical area (google it and then enter it if needed)", value = 90)
 Season = st.selectbox ("What times are you trying to get maximum sunlight absorption for?", ["The whole year", "Summer", "Winter"])
