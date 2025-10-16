@@ -46,6 +46,15 @@ st.success(f"Recommended tilt angle: {tilt:.1f}°")
 
 st. header ("Panel degradation") 
 Degradation = st. number_input ("Enter a specific year to figure out the efficiency of your panel after this period.")
-Degradation_calculation = (Degradation
-st. metric = ("Estimated panel efficiency", f
+Degradation_calculation = (Degradation - 0.5)
+st. metric = ("Estimated panel efficiency", Degradation_calculation)
+
+st. header ("Estimated number of panels that can fit")
+
+st. write ("The average size of a solar panel is 65 inches long by 39 inches wide, but this varies, if you have an idea of the panel size you will be using, enter it.")
+Panel_size = st. number_input ("Enter approximate panel sixe")
+Roof_size = st.number_input ("If you have an estimate of your roof size enter it")
+Panel_num = (Roof_size / Panel_size)
+Estimated_numberpanels = ("The number of panels that can fit:", Panel_num)
+                        
 
