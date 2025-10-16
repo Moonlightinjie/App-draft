@@ -16,7 +16,7 @@ sun_hours = st. number_input ("How many sunlight hours are there in your area?",
 Efficiency = st. slider ("Choose system efficiency you want in your panels) (%)", 50, 100, 80) 
 st. write ("Lower values mean your panels will be cheaper but less efficient")
 
-daily_energy = (Wattage * (Efficiency / 100)) * sun_hours / 1000)
+daily_energy = (Wattage * (Efficiency / 100)) * sun_hours / 1000
 monthly_energy = (daily_energy * 30)
 
 st.metric("Estimated Daily Energy Output", f"{daily_energy:.2f} kWh/day")
