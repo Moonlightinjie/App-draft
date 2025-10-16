@@ -9,8 +9,12 @@ tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & F
 with tab1:
     st. title ("The Simpler Solar Power Calculator")
     st. write ("Enter the information you know and allow the system to calculate for you")
+    
+sun_hours = st. number_input ("How many sunlight hours are there in your area?", value = 10)
+Efficiency = st. slider ("Choose system efficiency you want in your panels) (%)", 50, 100, 80) 
+st. write ("Lower values mean your panels will be cheaper but less efficient")
 
-Wattage = st.number_input ("Panel Wattage (W)", value = 400)
+Wattage = st.number_input ("Panel Wattage", value = 400)
 Latitude = st.number_input ("Input the latitude of your geographical area (google it and then enter it)", value = 90)
 Season = st.selectbox ("What times are you trying to get maximum sunlight absorption for?", ["The whole year", "Summer", "Winter"])
 if Season == "The whole year":
