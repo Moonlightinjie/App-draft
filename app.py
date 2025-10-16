@@ -69,6 +69,6 @@ if panel_size > 0:
     
 st. header ("Battery size")
 
-
+st. write ("This refers to the amount of energy you need to store in your panel")
 
 
