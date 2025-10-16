@@ -11,14 +11,17 @@ with tab1:
 
 st. header ("Estimated Output")
 
-Wattage = st.number_input ("Panel Wattage (the maximum power the panel can generate, think about what you're using the panel for to estimate this)", value = 400)
+st.header("Energy Output Estimator")
 
-sun_hours = st. number_input ("How many sunlight hours do you expect (Base this on your area, month etc.)?", value = 10)
-Efficiency = st. slider ("Choose system efficiency you want in your panels) (%)", 50, 100, 80) 
-st. write ("Lower values mean your panels will be cheaper but less efficient")
+Wattage = st.number_input( "Panel Wattage (the maximum power the panel can generate, think about what you're using the panel for to estimate this)",value=400)
 
-daily_energy = (Wattage * (Efficiency / 100)) * sun_hours / 1000
-monthly_energy = (daily_energy * 30)
+sun_hours = st.number_input("How many sunlight hours do you expect (Base this on your area, month etc.)?", value=10)
+
+Efficiency = st.slider("Choose system efficiency you want in your panels (%)", 50, 100, 80)
+st.write("Lower values mean your panels will be cheaper but less efficient")
+
+daily_energy = (Wattage * (Efficiency / 100) * sun_hours) / 1000  # kWh/day
+monthly_energy = daily_energy * 30
 
 st.metric("Estimated Daily Energy Output", f"{daily_energy:.2f} kWh/day")
 st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
