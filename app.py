@@ -49,7 +49,7 @@ st.success(f"Recommended tilt angle: {tilt:.1f}°")
 
 st.header("Panel degradation")
 
-years = st.number_input("Enter a specific year to figure out the efficiency of your panel after this period.", min_value=0, step=1)
+years = st.number_input("Enter a specific number of years to figure out the efficiency of your panel after this period.", min_value=0, step=1)
 degradation_rate = 0.005  # 0.5% per year
 efficiency = 100 * (1 - degradation_rate * years)
 
@@ -57,7 +57,8 @@ st.metric("Estimated panel efficiency (%)", f"{efficiency:.2f}")
 
 st.header("Estimated number of panels that can fit")
 
-st.write("The average size of a solar panel is 65 inches long by 39 inches wide, but this varies. If you have an idea of the panel size you will be using, enter it below.")
+st.write("The average size of a solar panel is 65 inches long by 39 inches wide, (17.6 square feet.) but this varies. If you have an idea of the panel size you will be using, enter it below.")
+st. write ("If you want to calculate the size of a solar panel in square feet, divide each inch by 12 and multiply them by each other.)
 
 panel_size = st.number_input("Enter approximate panel size (sq ft)", min_value=1.0)
 roof_size = st.number_input("If you have an estimate of your roof size, enter it (sq ft)", min_value=1.0)
@@ -67,5 +68,7 @@ if panel_size > 0:
     st.write("Estimated number of panels that can fit:", int(panel_num))
     
 st. header ("Battery size")
+
+
 
 
