@@ -1,5 +1,6 @@
 import streamlit as st
 import matplotlib.pyplot as plt
+import math 
 st.set_page_config(page_title=" The Simpler Solar Calculator", layout="centered")
 
 tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
@@ -21,6 +22,9 @@ monthly_energy = (daily_energy * 30)
 
 st.metric("Estimated Daily Energy Output", f"{daily_energy:.2f} kWh/day")
 st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
+
+daily_need = st. number_input ("Enter your daily household energy usage (kWh)")
+number_panels = math.ceil (daily_need / daily_energy)
 
 Latitude = st.number_input ("Input the latitude of your geographical area (google it and then enter it if needed)", value = 90)
 Season = st.selectbox ("What times are you trying to get maximum sunlight absorption for?", ["The whole year", "Summer", "Winter"])
