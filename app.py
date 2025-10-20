@@ -74,7 +74,7 @@ st. write ("This refers to the amount of energy you need to store in your panel"
 days_backup = st. slider ("How many days of backup energy do you need?", 1, 5, 2)
 battery_type = st.selectbox("What type of battery will you use?", ["Lithium-ion", "Lead-acid"])
 
-if battery_type = "Lithium-ion":
+if battery_type == "Lithium-ion":
     depth_of_discharge = 0.9    
     system_efficiency = 0.9     
     cost_per_kWh = 400          
