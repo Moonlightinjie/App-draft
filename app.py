@@ -15,6 +15,17 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+st.markdown(
+    """
+    <style>
+    h1, h2, h3, h4 {
+        font-family: 'Roboto', sans-serif;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
 
 with tab1:
