@@ -6,42 +6,15 @@ st.set_page_config(page_title=" The Simpler Solar Calculator", layout="centered"
 st.markdown(
     """
     <style>
-    /* Page background */
-    .css-18e3th9 {  /* Main app container */
-        background-color: #0d1f3c;
-        color: white;
-    }
-
-    /* Headers */
-    h1, h2, h3, h4 {
-        color: white;
-        font-family: 'Segoe UI', sans-serif;
-    }
-
-    /* Metric text */
-    .stMetricValue, .stMetricLabel {
-        color: white;
-    }
-
-    /* Info / warning / success boxes */
-    .stAlert {
-        border-radius: 10px;
-    }
-
-    /* Sidebar */
-    .css-1d391kg, .css-1v3fvcr {
-        background-color: #0d1f3c;
-        color: white;
-    }
-
-    /* Inputs (sliders, number inputs) */
-    .stSlider, .stNumberInput, .stSelectbox, .stCheckbox {
-        color: black;
+    /* Global font for headers, text, and metrics */
+    html, body, [class*="css"]  {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     </style>
     """,
     unsafe_allow_html=True
 )
+
 tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
 
 with tab1:
