@@ -70,7 +70,7 @@ if panel_size > 0 and roof_size > 0:
         "Actual prices depend on your region and installer."
     )
 else:
-    st.warning("Please
+    st.warning("Please enter a valid panel and roof size above to calculate cost.")
 
 st. header ("Angle tilt")
 
