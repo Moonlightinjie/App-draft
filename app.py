@@ -32,9 +32,6 @@ daily_need = st. number_input ("Enter your daily household energy usage (kWh) yo
 number_panels = math.ceil (daily_need / daily_energy)
 st. metric ("Estimated number of panels needed", number_panels)
 
-st. header ("Estimated solar panel cost")
-st. write ("You can estimate how much your solar panels and installation will cost based on the size of your system.")
-
 st.header("Estimated number of panels that can fit")
 
 st.write("The average size of a solar panel is 65 inches long by 39 inches wide, (17.6 square feet.) but this varies. If you have an idea of the panel size you will be using, enter it below.")
@@ -46,6 +43,9 @@ roof_size = st.number_input("If you have an estimate of your roof size, enter it
 if panel_size > 0:
     panel_num = roof_size / panel_size
     st.write("Estimated number of panels that can fit:", int(panel_num))
+
+st. header ("Estimated solar panel cost")
+st. write ("You can estimate how much your solar panels and installation will cost based on the size of your system.")
 
 if panel_size > 0 and roof_size > 0:
     
@@ -66,8 +66,7 @@ if panel_size > 0 and roof_size > 0:
     else:
         install_factor = 0.25  # default 25%
         st.write("Estimated installation cost: **25% of panel cost** (typical average).")
-
-    total_system_watts = panel_num * Wattage
+    total_system_watts = number_panels * Wattage
     panel_cost = total_system_watts * cost_per_watt
     installation_cost = panel_cost * install_factor
     total_cost_with_install = panel_cost + installation_cost
