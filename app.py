@@ -67,8 +67,30 @@ if panel_size > 0:
     panel_num = roof_size / panel_size
     st.write("Estimated number of panels that can fit:", int(panel_num))
     
-st. header ("Battery size")
+st. header ("Battery storage estimation")
 
 st. write ("This refers to the amount of energy you need to store in your panel")
+
+days_backup = st. slider ("How many days of backup energy do you need?", 1, 5, 2)
+battery_type = st.selectbox("What type of battery will you use?", ["Lithium-ion", "Lead-acid"])
+
+if battery_type = "Lithium-ion":
+    depth_of_discharge = 0.9    
+    system_efficiency = 0.9     
+    cost_per_kWh = 400          
+else:
+    depth_of_discharge = 0.5    
+    system_efficiency = 0.85
+    cost_per_kWh = 250
+
+battery_capacity = (daily_need * backup_days) / (depth_of_discharge * system_efficiency)
+total_cost = battery_capacity * cost_per_kWh
+
+st.metric("Recommended Battery Capacity", f"{battery_capacity:.2f} kWh")
+st.metric("Estimated Battery Cost", f"${total_cost:,.0f} USD")
+
+st.info(f"This estimate accounts for efficiency losses and safe discharge limits for {battery_type.lower()} batteries.")
+
+
 
 
