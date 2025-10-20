@@ -32,6 +32,46 @@ daily_need = st. number_input ("Enter your daily household energy usage (kWh) yo
 number_panels = math.ceil (daily_need / daily_energy)
 st. metric ("Estimated number of panels needed", number_panels)
 
+st. header ("Estimated solar panel cost")
+st. write ("You can estimate how much your solar panels and installation will cost based on the size of your system.")
+
+if panel_size > 0 and roof_size > 0:
+    
+    cost_per_watt = st.slider(
+        "Estimated cost per watt (USD/W)",
+        0.5, 1.5, 1.0,
+        help="Most solar panels cost between $0.80–$1.20 per watt."
+    )
+
+    custom_install = st.checkbox("I know my installation percentage")
+
+    if custom_install:
+        install_factor = st.slider(
+            "Enter installation and equipment cost (%)",
+            0, 100, 25,
+            help="Includes inverter, wiring, mounting, and labor costs."
+        ) / 100
+    else:
+        install_factor = 0.25  # default 25%
+        st.write("Estimated installation cost: **25% of panel cost** (typical average).")
+
+    total_system_watts = panel_num * Wattage
+    panel_cost = total_system_watts * cost_per_watt
+    installation_cost = panel_cost * install_factor
+    total_cost_with_install = panel_cost + installation_cost
+
+    st.metric("Estimated System Power", f"{total_system_watts/1000:.2f} kW")
+    st.metric("Estimated Panel Cost", f"${panel_cost:,.0f}")
+    st.metric("Estimated Installation & Equipment Cost", f"${installation_cost:,.0f}")
+    st.metric("Estimated Total System Cost", f"${total_cost_with_install:,.0f}")
+
+    st.info(
+        "This estimate uses average solar prices. Installation includes inverter, wiring, and labor. "
+        "Actual prices depend on your region and installer."
+    )
+else:
+    st.warning("Please
+
 st. header ("Angle tilt")
 
 Latitude = st.number_input ("Input the latitude of your geographical area (google it and then enter it if needed)", value = 90)
