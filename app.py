@@ -6,10 +6,9 @@ st.set_page_config(page_title="The Simpler Solar Calculator", layout="centered")
 
 st.markdown("""
 <style>
-/* Global font and colors */
-body, .stApp {background-color: #f5f5f5; color: #111; font-family: 'Inter', sans-serif;}
-h1, h2, h3, h4 {font-family: 'Roboto', sans-serif; color: #111;}
-.stMetricLabel, .stMetricValue {font-family: 'Courier New', monospace; font-weight: bold; color: #0077b6;}
+/* Background and card styling */
+body, .stApp {background-color: #f5f5f5; color: #111;}
+.stMetricLabel, .stMetricValue {font-weight: bold; color: #0077b6;}
 .stContainer {background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 20px;}
 </style>
 """, unsafe_allow_html=True)
