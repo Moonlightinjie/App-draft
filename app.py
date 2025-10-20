@@ -83,7 +83,7 @@ else:
     system_efficiency = 0.85
     cost_per_kWh = 250
 
-battery_capacity = (daily_need * backup_days) / (depth_of_discharge * system_efficiency)
+battery_capacity = (daily_need * days_backup) / (depth_of_discharge * system_efficiency)
 total_cost = battery_capacity * cost_per_kWh
 
 st.metric("Recommended Battery Capacity", f"{battery_capacity:.2f} kWh")
