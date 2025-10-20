@@ -3,24 +3,24 @@ import matplotlib.pyplot as plt
 import math 
 st.set_page_config(page_title=" The Simpler Solar Calculator", layout="centered")
 
-st. markdown (
+st.markdown(
     """
     <style>
     /* Page background */
-    .main {
-        background-color:#001B3A;  /*Dark blue */
-        color: white;               /* This is Default text color */
-        font-family: 'Segoe UI', sans-serif;
+    .css-18e3th9 {  /* Main app container */
+        background-color: #0d1f3c;
+        color: white;
     }
 
     /* Headers */
     h1, h2, h3, h4 {
-        color: #ffffff;
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
     }
 
     /* Metric text */
     .stMetricValue, .stMetricLabel {
-        color: #ffffff;
+        color: white;
     }
 
     /* Info / warning / success boxes */
@@ -28,15 +28,20 @@ st. markdown (
         border-radius: 10px;
     }
 
-    /* Tabs */
-    .css-1d391kg {
+    /* Sidebar */
+    .css-1d391kg, .css-1v3fvcr {
         background-color: #0d1f3c;
         color: white;
     }
-    </style>
-    """, unsafe_allow_html=True
-)
 
+    /* Inputs (sliders, number inputs) */
+    .stSlider, .stNumberInput, .stSelectbox, .stCheckbox {
+        color: black;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
 
 with tab1:
