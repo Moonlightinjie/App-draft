@@ -157,7 +157,7 @@ with tab2:
 st. header ("Safety + Regulations")
 st. write ("- Hire certified installers; improper installation can damage your roof or void warranties.")
 st. write ("- Follow local electrical codes: ensure proper wiring, grounding, mounting, and inverter connections, obtain any required permits or inspections, and use safety measures like circuit breakers to keep your solar system safe, legal, and reliable.")
-st. write ("- Consider trying to get insurance to protect your panels, inverters and batteries from damage due to storms, theft, or accidents, reducing potential repair or replacement costs.
+st. write ("- Consider trying to get insurance to protect your panels, inverters and batteries from damage due to storms, theft, or accidents, reducing potential repair or replacement costs.")
 
     
 
