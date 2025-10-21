@@ -41,7 +41,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-tab1, tab2, tab3 = st.tabs (["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
+tab1, tab2, tab3 = st.tabs (["Calculator", "Tips & Reccomendations"])
 
 with tab1:
     st. title ("The Simpler Solar Power Calculator")
@@ -194,6 +194,9 @@ st.metric("Recommended Battery Capacity", f"{battery_capacity:.2f} kWh")
 st.metric("Estimated Battery Cost", f"${total_cost:,.0f} USD")
 
 st.info(f"This estimate accounts for efficiency losses and safe discharge limits for {battery_type.lower()} batteries.")
+
+st. header ("The Total")
+ st.metric("Final Total Cost (Panels + Installation + Battery)", f"${final_total_cost:,.0f} USD")
 
 
 
