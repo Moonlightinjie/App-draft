@@ -206,7 +206,7 @@ with tab2:
 
 st. header ("Energy Usage & Selection of your panels")
 st. write ("Know your daily energy needs before buying panels, you can do this by checking your electric bill. Overestimating wastes money and underestimating will leave you short.
-Choose panels with higher efficiency if you have limited roof space as they produce more energy per panel. Also compare different wattages, sometimes more smaller panels are better than fewer large panels depending on roof shape.
+Choose panels with higher efficiency if you have limited roof space as they produce more energy per panel. Also compare different wattages, sometimes more smaller panels are better than fewer large panels depending on roof shape.")
 
     
 
