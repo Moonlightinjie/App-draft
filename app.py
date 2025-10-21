@@ -196,7 +196,7 @@ st.metric("Estimated Battery Cost", f"${total_cost:,.0f} USD")
 st.info(f"This estimate accounts for efficiency losses and safe discharge limits for {battery_type.lower()} batteries.")
 
 st. header ("The Total")
- st.metric("Final Total Cost (Panels + Installation + Battery)", f"${final_total_cost:,.0f} USD")
+st.metric("Final Total Cost (Panels + Installation + Battery)", f"${final_total_cost:,.0f} USD")
 
 
 
