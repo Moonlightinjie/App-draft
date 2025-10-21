@@ -130,14 +130,14 @@ with tab2:
     st.title("Tips & Recommendations")
     st.write("Here are some tips to help you optimize your solar setup:")
     st.header("Energy Usage & Panel Selection")
-    st.write("- Check your electricity bill to know daily energy needs (monthly kWh ÷ 30).")
-    st.write("- Choose high-efficiency panels if roof space is limited.")
-    st.write("- Compare panel wattages; sometimes more smaller panels are better than fewer large ones.")
+    st.write("- Check your electricity bill to know your daily energy needs (monthly kWh ÷ 30).")
+    st.write("- Choose higher efficiency panels if roof space is limited.")
+    st.write("- Compare panel wattages, sometimes more smaller panels are better than fewer large ones.")
 
     st.header("Placement & Installation")
     st.write("- Panels should face south (in Northern Hemisphere) for maximum sunlight.")
-    st.write("- Avoid shading from trees, chimneys, or other buildings.")
-    st.write("- Ensure correct tilt angle for optimal performance.")
+    st.write("- Try avoid shading from trees, chimneys, or other buildings.")
+    st.write("- Ensure your panel is placed at the correct tilt angle for optimal performance and sunlight absorption.")
 
     st.header("Battery Storage")
     st.write("- Use batteries if you want backup for cloudy days or night usage.")
@@ -145,15 +145,19 @@ with tab2:
     st.write("- Lithium-ion batteries allow deeper discharge; lead-acid cannot be fully drained.")
 
     st.header("Cost & Financial Tips")
-    st.write("- Include installation & equipment costs (20–30% of panel cost).")
+    st.write("- Make sure to plan for installation & equipment costs (they could add 20–30% of panel cost).")
     st.write("- Check for government incentives or tax credits to reduce costs.")
     st.write("- Invest in high-quality panels for long-term savings.")
 
     st.header("Maintenance")
-    st.write("- Clean panels periodically to maintain output.")
+    st.write("- Clean panels periodically to maintain output, dirty panels can reduce output by 10–25%..")
     st.write("- Monitor panel efficiency over time; average degradation ~0.5%/year.")
-    st.write("- Regularly check connections and inverter performance.")
+    st.write("- Regularly check connections and inverter performance to ensure consistent energy production.")
 
+st. header ("Safety + Regulations")
+st. write ("- Hire certified installers; improper installation can damage your roof or void warranties.")
+st. write ("- Follow local electrical codes: ensure proper wiring, grounding, mounting, and inverter connections, obtain any required permits or inspections, and use safety measures like circuit breakers to keep your solar system safe, legal, and reliable.")
+st. write ("- Consider trying to get insurance to protect your panels, inverters and batteries from damage due to storms, theft, or accidents, reducing potential repair or replacement costs.
 
     
 
