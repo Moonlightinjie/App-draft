@@ -1,6 +1,9 @@
 import streamlit as st
 import matplotlib.pyplot as plt
 import math 
+import pandas as pd
+import numpy as np
+
 st.set_page_config(page_title=" The Simpler Solar Calculator", layout="centered")
 
 st.markdown(
@@ -115,6 +118,35 @@ if panel_size > 0 and roof_size > 0:
     )
 else:
     st.warning("Please enter a valid panel and roof size above to calculate cost.")
+
+st. header ("Graph Representation")
+
+panel_counts = np.arange(1, 51)
+daily_output_per_panel = Wattage * (Efficiency / 100) * sun_hours / 1000  # kWh
+outputs = panel_counts * daily_output_per_panel
+df = pd.DataFrame({"Number of Panels": panel_counts, "Daily Output (kWh)": outputs})
+
+st.subheader("Daily Output vs Number of Panels")
+st.line_chart(df.set_index("Number of Panels"))
+st.subheader("Compare Different Panel Wattages & Efficiency")
+comparison_type = st.radio("Compare by:", ["Panel Wattage", "Efficiency"])
+
+if comparison_type == "Panel Wattage":
+    wattages = [200, 300, 400, 500]
+    comp_data = {
+        f"{w}W": panel_counts * (w * (Efficiency / 100) * sun_hours / 1000)
+        for w in wattages
+    }
+else:
+    efficiencies = [60, 70, 80, 90, 100]
+    comp_data = {
+        f"{e}%": panel_counts * (Wattage * (e / 100) * sun_hours / 1000)
+        for e in efficiencies
+    }
+
+comp_df = pd.DataFrame(comp_data, index=panel_counts)
+
+st.line_chart(comp_df)
 
 st. header ("Angle tilt")
 
