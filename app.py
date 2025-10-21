@@ -200,6 +200,16 @@ if panel_size > 0 and roof_size > 0:
     final_total_cost = total_cost_with_install + total_cost 
     st.metric("Final Total Cost (Panels + Installation + Battery)", f"${final_total_cost:,.0f} USD")
 
+with tab2: 
+     st. title ("Tips & Reccomendations")
+     st. write ("Just some advice to help you out")
+
+st. header ("Energy Usage & Selection of your panels")
+st. write ("Know your daily energy needs before buying panels, you can do this by checking your electric bill. Overestimating wastes money and underestimating will leave you short.
+Choose panels with higher efficiency if you have limited roof space as they produce more energy per panel. Also compare different wattages, sometimes more smaller panels are better than fewer large panels depending on roof shape.
+
+    
+
 
 
 
