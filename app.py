@@ -41,7 +41,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-tab1, tab2, tab3 = st.tabs (["Calculator", "Tips & Reccomendations"])
+tab1, tab2 = st.tabs (["Calculator", "Tips & Reccomendations"])
 
 with tab1:
     st. title ("The Simpler Solar Power Calculator")
