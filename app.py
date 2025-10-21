@@ -4,15 +4,6 @@ import math
 
 st.set_page_config(page_title="The Simpler Solar Calculator", layout="centered")
 
-st.markdown("""
-<style>
-/* Background and card styling */
-body, .stApp {background-color: #f5f5f5; color: #111;}
-.stMetricLabel, .stMetricValue {font-weight: bold; color: #0077b6;}
-.stContainer {background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); margin-bottom: 20px;}
-</style>
-""", unsafe_allow_html=True)
-
 tab1, tab2, tab3 = st.tabs(["Calculator", "Learn About Solar Panels", "Tips & FAQs"])
 
 with tab1:
