@@ -194,7 +194,31 @@ with tab2:
     st.header("Energy Usage & Selection of your panels")
     st.write("Know your daily energy needs before buying panels, you can do this by checking your electric bill. Overestimating wastes money and underestimating will leave you short.")
     st.write("Choose panels with higher efficiency if you have limited roof space as they produce more energy per panel. Also compare different wattages, sometimes more smaller panels are better than fewer large panels depending on roof shape.")
+    
+    st.header("Placement & Installation")
+    st.write("- Panels should face south (in Northern Hemisphere) and face north (in southern hemisphere) for maximum sunlight.")
+    st.write("- Try avoid shading from trees, chimneys, or other buildings.")
+    st.write("- Ensure your panel is placed at the correct tilt angle for optimal performance and sunlight absorption.")
 
+    st.header("Battery Storage")
+    st.write("- Use batteries if you want backup for cloudy days or night usage.")
+    st.write("- Match battery capacity to backup days and household needs.")
+    st.write("- Lithium-ion batteries let you use most of their stored energy, while lead-acid batteries can only use about half safely.")
+
+    st.header("Cost & Financial Tips")
+    st.write("- Make sure to plan for installation & equipment costs (they could add 20–30% of panel cost).")
+    st.write("- Check for government incentives or tax credits to reduce costs.")
+    st.write("- Invest in high-quality panels for long-term savings.")
+
+    st.header("Maintenance")
+    st.write("- Clean panels periodically to maintain output, dirty panels can reduce output by 10–25%.")
+    st.write("- Monitor panel efficiency over time; average degradation ~0.5%/year.")
+    st.write("- Regularly check connections and inverter performance (A device that converts the DC electricity from solar panels into AC electricity that can be used by household appliances.) to ensure consistent energy production.")
+
+    st.header("Safety + Regulations")
+    st.write("- Hire certified installers; improper installation can damage your roof or void warranties.")
+    st.write("- Follow local electrical codes, ensure proper wiring, grounding, mounting, and inverter connections, obtain any required permits or inspections, and use safety measures like circuit breakers to keep your solar system safe, legal, and reliable.")
+    st.write("- Consider trying to get insurance to protect your panels, inverters and batteries from damage due to storms, theft, or accidents, reducing potential repair or replacement costs.")
     
 
 
