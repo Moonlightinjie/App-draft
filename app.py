@@ -152,7 +152,7 @@ with tab1:
         st.write("Tilt is equal to your latitude - 15 degrees")
     else:
         tilt = Latitude + 15
-        st.write("Tilt is equal to your latitude - 15 degrees")
+        st.write("Tilt is equal to your latitude + 15 degrees")
     st.success(f"Recommended tilt angle: {tilt:.1f}°")
 
     st.header("Panel degradation")
