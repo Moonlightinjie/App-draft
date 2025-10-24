@@ -82,7 +82,7 @@ with tab1:
         cost_per_watt = st.slider(
             "Estimated cost per watt (USD/W)",
             0.5, 1.5, 1.0,
-            help="Most solar panels cost between $0.80–$1.20 per watt."
+            st. write ("Tip: Most solar panels have costs between $0.80–$1.20 per watt, you can research the average in your country!")
         )
 
         custom_install = st.checkbox("I know my installation percentage")
