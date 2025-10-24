@@ -60,7 +60,7 @@ with tab1:
     st.metric("Estimated Monthly Energy Output", f"{monthly_energy:.2f} kWh/month")
 
     st.header("Number of panels needed")
-    daily_need = st.number_input("Enter your daily household energy usage (kWh) you can use the figure calculated above")
+    daily_need = st.number_input("Enter your daily household energy usage (kWh) you can use a figure on your electric bill")
     number_panels = math.ceil(daily_need / daily_energy)
     st.metric("Estimated number of panels needed", number_panels)
 
