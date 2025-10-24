@@ -17,6 +17,7 @@ The app takes basic user information and performs calculations to give rough est
 ## Set-up
 
 Clone the repository: https://github.com/Moonlightinjie/App-draft.git
+                      cd App-draft
 
 Set up a virtual environment: python -m venv venv (for windows)
 
